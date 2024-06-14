@@ -1,0 +1,67 @@
+/* Base style for all screen sizes */
+.body-header {
+    text-align: center;
+}
+
+body::before {
+    content: "Screen size: default";
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+/* For screen size 1440px */
+@media only screen and (min-width: 1440px) {
+    body {
+        background-color: green;
+    }
+
+    body::before {
+        content: "Screen size: 1440px";
+    }
+}
+
+/* For screen size 1024px */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    body {
+        background-color: yellow;
+    }
+
+    body::before {
+        content: "Screen size: 1024px";
+    }
+}
+
+/* For screen size 768px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-color: blue;
+    }
+
+    body::before {
+        content: "Screen size: 768px";
+    }
+}
+
+/* For screen size 425px */
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+    body {
+        background-color: red;
+    }
+
+    body::before {
+        content: "Screen size: 425px";
+    }
+}
+
+/* For screen sizes below 425px */
+@media only screen and (max-width: 424px) {
+    body {
+        background-color: red;
+        /* same as 425px */
+    }
+
+    body::before {
+        content: "Screen size: less than 425px";
+    }
+}
